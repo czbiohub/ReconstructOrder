@@ -25,7 +25,7 @@ def stokes2ellipse(S):
         ellipt = np.sign(s3Norm)
     ellipt = np.asscalar(ellipt)
 
-    orient = 0.5 * np.arctan2(s2Norm, s1Norm)
+    orient = 0.5 * np.arctan2(s2Norm, s1Norm) % np.pi
     orient = np.asscalar(orient)
     
     return (ellipt, orient)
